@@ -44,15 +44,23 @@ range(c(s1$breaks, s2$breaks, s3$breaks)) # Get range for x-axis
 max(c(s1$counts,s2$counts,s3$counts))
 
 par(mfrow=c(3,1))
-hist(survey23$CPU.Number.of.Cores..int., xlim = c(-4,16), ylim=c(0,40),
+hist(survey23$CPU.Number.of.Cores..int., xlim = c(-4,16), ylim=c(0,40), col="orange",
      xlab="2023 Surveys", main="CPU Number of Cores for Computers in the 2023 Cohort")
-hist(survey22$CPU.Number.of.Cores..int., xlim = c(-4,16), ylim=c(0,40),
+hist(survey22$CPU.Number.of.Cores..int., xlim = c(-4,16), ylim=c(0,40), col="orange",
      xlab="2022 Surveys", main="CPU Number of Cores for Computers in the 2022 Cohort")
-hist(survey21$CPU.Number.of.Cores, xlim = c(-4,16), ylim=c(0,40),
+hist(survey21$CPU.Number.of.Cores, xlim = c(-4,16), ylim=c(0,40), col="orange",
      xlab="2021 Surveys", main="CPU Number of Cores for Computers in the 2021 Cohort")
 ```
 
 ```{r for fun}
+s1 <- hist(survey23$CPU.Number.of.Cores..int.)
+s2 <- hist(survey22$CPU.Number.of.Cores..int.)
+s3 <- hist(survey21$CPU.Number.of.Cores)
+
+d1 <- density(survey23$CPU.Number.of.Cores..int.)
+d2 <- density(survey22$CPU.Number.of.Cores..int.)
+d3 <- density(survey21$CPU.Number.of.Cores)
+
 library(scales)
 plot(s1, col=alpha("red",0.5), xlim = c(-4,16), ylim=c(0,40))
 plot(s2, add=TRUE, col=alpha("blue",0.5))
