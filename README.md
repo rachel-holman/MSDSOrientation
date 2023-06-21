@@ -1,4 +1,4 @@
-# Rachel Holman's MSDS Summer Courses
-## Includes: Orientation, Application of Data Science Coursework, and Linear Models for Data Science course work
+# Rachel Holman's MSDS Orientation
+## Includes: A forked repository and an exploration of survey data
 
-Each folder consists of modules, projects, and assignments
+Each folder consists of dta, code, and output
